@@ -15,25 +15,25 @@ Assignment completed with dplyr version: 1.1.4
 
 ### General Outline
 Step 1) Check/Create directory to store raw data files  
-- Check for existing folder or create a new one called "data"  
+  Check for existing folder or create a new one called "data"  
 Step 2) Download Data files to the new directory  
-- The file will be downloaded as a .zip folder  
+  The file will be downloaded as a .zip folder  
 Step 3) Unzip the files in the directory to "Unzipped" folder  
-- The unzipping process pulls out multiple files and paths   
+  The unzipping process pulls out multiple files and paths   
 Step 4) Load the raw data files into R   
-- These files include our Activity lists, Variable names, and data resulting in multiple tables  
+  These files include our Activity lists, Variable names, and data resulting in multiple tables  
 Step 5) Merge test and training tables together  
-- We first want to merge the test and training data together  
+  We first want to merge the test and training data together  
 Step 6) Add descriptive names to the activity variable  
-- It's easier to replace the id number with the activity while the data.frame is small  
+  It's easier to replace the id number with the activity while the data.frame is small  
 Step 7) Appropriately name the variables of the data frames  
-- Using the features table, create a naming vector and appropriately name the variables  
+  Using the features table, create a naming vector and appropriately name the variables  
 Step 8) Extract only the mean and standard deviation for each measurement  
-- Extract out all of the relevant variables to our goal (ie. mean and std)  
+  Extract out all of the relevant variables to our goal (ie. mean and std)  
 Step 9) Merge subject, activity and data set for a full clean, albeit large data set  
-- combine columns from the three data frames so that we have a subject and activity for every recording  
+  Combine columns from the three data frames so that we have a subject and activity for every recording  
 Step 10) Create a new tidy set with average of each variable for each activity and each subject  
-- Group by subject and activity, then find the mean of every variable for each grouping
+  Group by subject and activity, then find the mean of every variable for each grouping
 
 ### Variables
 
