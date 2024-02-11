@@ -15,128 +15,128 @@ Assignment completed with dplyr version: 1.1.4
 
 ### General Outline
 Step 1) Check/Create directory to store raw data files  
-  - Check for existing folder or create a new one called "data"  
+- Check for existing folder or create a new one called "data"  
 Step 2) Download Data files to the new directory  
-  - The file will be downloaded as a .zip folder  
+- The file will be downloaded as a .zip folder  
 Step 3) Unzip the files in the directory to "Unzipped" folder  
-  - The unzipping process pulls out multiple files and paths   
+- The unzipping process pulls out multiple files and paths   
 Step 4) Load the raw data files into R   
-  - These files include our Activity lists, Variable names, and data resulting in multiple tables  
+- These files include our Activity lists, Variable names, and data resulting in multiple tables  
 Step 5) Merge test and training tables together  
-  - We first want to merge the test and training data together  
+- We first want to merge the test and training data together  
 Step 6) Add descriptive names to the activity variable  
-  - It's easier to replace the id number with the activity while the data.frame is small  
+- It's easier to replace the id number with the activity while the data.frame is small  
 Step 7) Appropriately name the variables of the data frames  
-  - Using the features table, create a naming vector and appropriately name the variables  
+- Using the features table, create a naming vector and appropriately name the variables  
 Step 8) Extract only the mean and standard deviation for each measurement  
-  - Extract out all of the relevant variables to our goal (ie. mean and std)  
+- Extract out all of the relevant variables to our goal (ie. mean and std)  
 Step 9) Merge subject, activity and data set for a full clean, albeit large data set  
-  - combine columns from the three data frames so that we have a subject and activity for every recording  
+- combine columns from the three data frames so that we have a subject and activity for every recording  
 Step 10) Create a new tidy set with average of each variable for each activity and each subject  
-  - Group by subject and activity, then find the mean of every variable for each grouping
+- Group by subject and activity, then find the mean of every variable for each grouping
 
 ### Variables
 
-Activity labels in processing step prior
-1 WALKING
-2 WALKING_UPSTAIRS
-3 WALKING_DOWNSTAIRS
-4 SITTING
-5 STANDING
-6 LAYING
+Activity labels in processing step prior:  
+1 WALKING  
+2 WALKING_UPSTAIRS  
+3 WALKING_DOWNSTAIRS  
+4 SITTING  
+5 STANDING  
+6 LAYING  
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
 
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-mean()-X
-tbodyAcc-mean()-Y
-tBodyAcc-mean()-Z
-tBodyAcc-std()-X
-tBodyAcc-std()-Y
-tBodyAcc-std()-Z
-tGravityAcc-mean()-X
-tGravityAcc-mean()-Y
-tGravityAcc-mean()-Z
-tGravityAcc-std()-X
-tGravityAcc-std()-Y
-tGravityAcc-std()-Z
-tBodyAccJerk-mean()-X
-tBodyAccJerk-mean()-Y
-tBodyAccJerk-mean()-Z
-tBodyAccJerk-std()-X
-tBodyAccJerk-std()-Y
-tBodyAccJerk-std()-Z
-tBodyGyro-mean()-X
-tBodyGyro-mean()-Y
-tBodyGyro-mean()-Z
-tBodyGyro-std()-X
-tBodyGyro-std()-Y
-tBodyGyro-std()-Z
-tBodyGyroJerk-mean()-X
-tBodyGyroJerk-mean()-Y
-tBodyGyroJerk-mean()-Z
-tBodyGyroJerk-std()-X
-tBodyGyroJerk-std()-Y
-tBodyGyroJerk-std()-Z
-tBodyAccMag-mean()
-tBodyAccMag-std()
-tGravityAccMag-mean()
-tGravityAccMag-std()
-tBodyAccJerkMag-mean()
-tBodyAccJerkMag-std()
-tBodyGyroMag-mean()
-tBodyGyroMag-std()
-fBodyAcc-mean()-X
-fBodyAcc-mean()-Y
-fBodyAcc-mean()-Z
-fBodyAcc-std()-X
-fBodyAcc-std()-Y
-fBodyAcc-std()-Z
-fBodyAcc-meanFreq()-X
-fBodyAcc-meanFreq()-Y
-fBodyAcc-meanFreq()-Z
-fBodyAccJerk-mean()-X
-fBodyAccJerk-mean()-Y
-fBodyAccJerk-mean()-Z
-fBodyAccJerk-std()-X
-fBodyAccJerk-std()-Y
-fBodyAccJerk-std()-Z
-fBodyAccJerk-meanFreq()-X
-fBodyAccJerk-meanFreq()-Y
-fBodyAccJerk-meanFreq()-Z
-fBodyGyro-mean()-X
-fBodyGyro-mean()-Y
-fBodyGyro-mean()-Z
-fBodyGyro-std()-X
-fBodyGyro-std()-Y
-fBodyGyro-std()-Z
-fBodyGyro-meanFreq()-X
-fBodyGyro-meanFreq()-Y
-fBodyGyro-meanFreq()-Z
-fBodyAccMag-mean()
-fBodyAccMag-std()
-fBodyBodyAccJerkMag-mean()
-fBodyBodyAccJerkMag-std()
-fBodyBodyGyroMag-mean()
-fBodyBodyGyroMag-std()
-fBodyBodyGyroJerkMag-mean()
-fBodyBodyGyroJerkMag-std()
-angle(tBodyAccJerkMean),gravityMean)
-angle(tBodyGyroMean,gravityMean)
-angle(tBodyGyroJerkMean,gravityMean)
-angle(X,gravityMean)
-angle(Y,gravityMean)
-angle(Z,gravityMean)
+tBodyAcc-mean()-X  
+tbodyAcc-mean()-Y  
+tBodyAcc-mean()-Z  
+tBodyAcc-std()-X  
+tBodyAcc-std()-Y  
+tBodyAcc-std()-Z  
+tGravityAcc-mean()-X  
+tGravityAcc-mean()-Y  
+tGravityAcc-mean()-Z  
+tGravityAcc-std()-X  
+tGravityAcc-std()-Y  
+tGravityAcc-std()-Z  
+tBodyAccJerk-mean()-X  
+tBodyAccJerk-mean()-Y  
+tBodyAccJerk-mean()-Z  
+tBodyAccJerk-std()-X  
+tBodyAccJerk-std()-Y  
+tBodyAccJerk-std()-Z  
+tBodyGyro-mean()-X  
+tBodyGyro-mean()-Y  
+tBodyGyro-mean()-Z  
+tBodyGyro-std()-X  
+tBodyGyro-std()-Y  
+tBodyGyro-std()-Z  
+tBodyGyroJerk-mean()-X  
+tBodyGyroJerk-mean()-Y  
+tBodyGyroJerk-mean()-Z  
+tBodyGyroJerk-std()-X  
+tBodyGyroJerk-std()-Y  
+tBodyGyroJerk-std()-Z  
+tBodyAccMag-mean()  
+tBodyAccMag-std()  
+tGravityAccMag-mean()  
+tGravityAccMag-std()  
+tBodyAccJerkMag-mean()  
+tBodyAccJerkMag-std()  
+tBodyGyroMag-mean()  
+tBodyGyroMag-std()  
+fBodyAcc-mean()-X  
+fBodyAcc-mean()-Y  
+fBodyAcc-mean()-Z  
+fBodyAcc-std()-X  
+fBodyAcc-std()-Y  
+fBodyAcc-std()-Z  
+fBodyAcc-meanFreq()-X  
+fBodyAcc-meanFreq()-Y  
+fBodyAcc-meanFreq()-Z  
+fBodyAccJerk-mean()-X  
+fBodyAccJerk-mean()-Y  
+fBodyAccJerk-mean()-Z  
+fBodyAccJerk-std()-X  
+fBodyAccJerk-std()-Y  
+fBodyAccJerk-std()-Z  
+fBodyAccJerk-meanFreq()-X  
+fBodyAccJerk-meanFreq()-Y  
+fBodyAccJerk-meanFreq()-Z  
+fBodyGyro-mean()-X  
+fBodyGyro-mean()-Y  
+fBodyGyro-mean()-Z  
+fBodyGyro-std()-X  
+fBodyGyro-std()-Y  
+fBodyGyro-std()-Z  
+fBodyGyro-meanFreq()-X  
+fBodyGyro-meanFreq()-Y  
+fBodyGyro-meanFreq()-Z  
+fBodyAccMag-mean()  
+fBodyAccMag-std()  
+fBodyBodyAccJerkMag-mean()  
+fBodyBodyAccJerkMag-std()  
+fBodyBodyGyroMag-mean()  
+fBodyBodyGyroMag-std()  
+fBodyBodyGyroJerkMag-mean()  
+fBodyBodyGyroJerkMag-std()  
+angle(tBodyAccJerkMean),gravityMean)  
+angle(tBodyGyroMean,gravityMean)  
+angle(tBodyGyroJerkMean,gravityMean)  
+angle(X,gravityMean)  
+angle(Y,gravityMean)  
+angle(Z,gravityMean)  
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
+gravityMean  
+tBodyAccMean  
+tBodyAccJerkMean  
+tBodyGyroMean  
+tBodyGyroJerkMean  
 
 There is no missing data in the data set.
 
