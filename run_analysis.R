@@ -1,6 +1,6 @@
 ##Getting and Cleaning Data - Final Assignment.
 
-## Step 1) Create a directory to store the raw data.
+## Create a directory to store the raw data.
 if(!file.exists("./data")){dir.create("./data")}
 
 ## Download the raw data files from the internet
