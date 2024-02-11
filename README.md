@@ -1,9 +1,9 @@
 ==========================  
-Getting and Cleaning Data
-Final Assignment
-Thomas C. MacPherson
-02-10-2024
-==========================
+Getting and Cleaning Data  
+Final Assignment  
+Thomas C. MacPherson  
+02-10-2024  
+==========================  
 
 Repository for the final assignment in Getting and Cleaning Data course from Johns Hopkins Data Science specialization.
 
