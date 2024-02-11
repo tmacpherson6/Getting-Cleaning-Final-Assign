@@ -59,10 +59,10 @@ data<-arrange(data,subject)
 tidy<-data %>% group_by(subject,activity) %>% summarise(across(everything(),list(mean)))
 
 ## Write the table to a new file so we have a clean standalone data set 
-write.table(tidy,"./data/finaldata.csv")
+write.table(tidy,"./data/finaldata.txt",row.names=FALSE)
 
 ## Open the clean data set
-tidydata<-read.table("./data/finaldata.csv")
+tidydata<-read.table("./data/finaldata.txt")
 
 ## View the tidy data in a clean format
 View(tidydata)
