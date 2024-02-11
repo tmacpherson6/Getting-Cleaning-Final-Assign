@@ -29,7 +29,7 @@ This program will locate the data files online, download them into a new child d
 
 For detailed instruction on how the data is manipulated and transformed into the final tidy data set, see the "CodeBook.md" file. Here, there is a detailed discussion of the data and all of the steps taken to clean the data. 
 
-The final output of the "run_analysis.R" file is a clean and tidy data set printed to the data folder titled "finaldata.csv", it is reimported and presented in the console using View(). The file contains the average of each variable for each activity and each subject.
+The final output of the "run_analysis.R" file is a clean and tidy data set printed to the data folder titled "finaldata.txt", it is re-imported and presented in the console using View(). The file contains the average of each variable for each activity and each subject.
 
 =============================================
 
